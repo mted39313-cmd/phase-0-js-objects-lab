@@ -1,4 +1,4 @@
-// 1. Create the attendee object
+// 1. Declare and initialize the attendee object
 const attendee = {
     attendeeId: "T001",
     name: "Alice Smith",
@@ -7,7 +7,7 @@ const attendee = {
     ticketPrice: 150.00
 };
 
-// 2. Function to log the attendee's name
+// 2. Function to log the attendee name
 function logAttendeeName(attendeeObj) {
     console.log(attendeeObj.name);
 }
@@ -36,3 +36,14 @@ function removeEventProperty(attendeeObj) {
 function addCheckedInProperty(attendeeObj) {
     attendeeObj.checkedIn = true;
 }
+
+// Export everything so the test suite can access them
+module.exports = {
+    attendee,
+    logAttendeeName,
+    logTicketPrice,
+    updateTicketType,
+    updateTicketPrice,
+    removeEventProperty,
+    addCheckedInProperty
+};
